@@ -1,0 +1,161 @@
+[{
+    "name":"Men's Watch",
+    "price":1599,
+    "image":"images/men2.jpg",
+    "description":"Stylish durable everyday wear watch",
+    "location":""
+
+},
+{
+    "name":"Men's Watch",
+    "price":1299,
+    "image":"images/men3.jpg",
+    "description":"Elegant premium design with precision",
+    "location":""
+
+},
+{
+    "name":"Men's Watch",
+    "price":2599,
+    "image":"images/men4.jpg",
+    "description":"Sporty watch built for performance",
+    "location":""
+
+},
+{
+    "name":"Men's Watch",
+    "price":2099,
+    "image":"images/men5.jpg",
+    "description":"Smart watch with fitness tracking",
+    "location":""
+
+},
+{
+    "name":"Men's Watch",
+    "price":1799,
+    "image":"images/men6.jpg",
+    "description":"Minimalist design for modern lifestyle",
+    "location":""
+
+},
+{
+    "name":"Womens's Watch",
+    "price":1999,
+    "image":"images/women2.jpg",
+    "description":"Comfortable strap with sleek dial",
+    "location":""
+
+},
+{
+    "name":"Women's Watch",
+    "price":1259,
+    "image":"images/women3.jpg",
+    "description":"Durable water-resistant outdoor watch",
+    "location":""
+
+},
+{
+    "name":"Women's Watch",
+    "price":999,
+    "image":"images/women4.jpg",
+    "description":"Trendy watch for daily outfits",
+    "location":""
+
+},
+{
+    "name":"Women's Watch",
+    "price":1499,
+    "image":"images/women5.jpg",
+    "description":"Lightweight watch for all-day comfort",
+    "location":""
+
+},
+{
+    "name":"Women's Watch",
+    "price":1999,
+    "image":"images/women6.jpg",
+    "description":"Durable water-resistant outdoor watch",
+    "location":""
+
+},
+{
+    "name":"Smart Watch",
+    "price":1799,
+    "image":"images/smart2.jpg",
+    "description":"Trendy watch for daily outfits",
+    "location":""
+
+},
+{
+    "name":"Smart Watch",
+    "price":1300,
+    "image":"images/smart3.jpg",
+    "description":"Classic analog watch with elegance",
+    "location":""
+
+},
+{
+    "name":"Smart Watch",
+    "price":599,
+    "image":"images/smart4.jpg",
+    "description":"Lightweight watch for all-day comfort",
+    "location":""
+
+},
+{
+    "name":"Smart Watch",
+    "price":2099,
+    "image":"images/smart5.jpg",
+    "description":"Classic analog watch with elegance",
+    "location":""
+
+},
+{
+    "name":"Smart Watch",
+    "price":1500,
+    "image":"images/smart6.jpg",
+    "description":"Comfortable strap with sleek dial",
+    "location":""
+
+},
+{
+    "name":"Digital Watch",
+    "price":599,
+    "image":"images/digital2.jpg",
+    "description":"Minimalist design for modern lifestyle",
+    "location":""
+
+},
+{
+    "name":"Digital Watch",
+    "price":999,
+    "image":"images/digital3.jpg",
+    "description":"Smart watch with fitness tracking",
+    "location":""
+
+},
+{
+    "name":"Digital Watch",
+    "price":1999,
+    "image":"images/digital4.jpg",
+    "description":"Sporty watch built for performance",
+    "location":""
+
+},
+{
+    "name":"Digital Watch",
+    "price":2099,
+    "image":"images/digital5.jpg",
+    "description":"Elegant premium design with precision",
+    "location":""
+
+},
+{
+    "name":"Digital Watch",
+    "price":1299,
+    "image":"images/digital6.jpg",
+    "description":"Stylish durable everyday wear watch",
+    "location":""
+
+}
+]
