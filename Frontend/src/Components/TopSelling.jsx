@@ -19,7 +19,7 @@ export default function TopSelling({ products }) {
 
       
       <div className="justify-between items-center mt-20 ml-30 mb-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:mr-20 sm:mr-20  gap-6">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:mr-20 sm:mr-20  gap-6">
         {topProducts.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}

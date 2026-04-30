@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar"
 import axios from "axios"
 import Home from "../Pages/Home"
+import "../App.css"
 
 
 
@@ -38,7 +39,7 @@ export default function Login(){
         <Navbar/>
         <section className="min-h-screen flex items-center justify-center bg-gray-200 px-4">
   
-  <div className="animate-slideUp bg-white/30 shadow-xl rounded-2xl p-6 sm:p-8 w-full max-w-md">
+  <div className="animate-slideUp bg-white/30 shadow-xl rounded-2xl p-6 sm:p-8 w-full max-w-md opacity-0 translate-y-10 animate-fadeSlideUp2">
     
     <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6">
       Welcome Back!

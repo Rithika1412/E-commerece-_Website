@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition">
+    <div className="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition hover:-translate-y-1 hover:scale-105">
       <img
         src={product.image}
         alt={product.name}
@@ -30,7 +30,7 @@ export default function ProductCard({ product }) {
       </p>
 
       <button
-        className="w-full mt-3 bg-black text-white py-2 rounded hover:bg-gray-800"
+        className="w-full mt-3 bg-black text-white py-2 rounded hover:bg-gray-500 "
         onClick={handleAddToCart}
       >
         Add to Cart

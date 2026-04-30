@@ -40,7 +40,7 @@ export default function Home() {
 
   <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
 
-
+   
     <div className="grid grid-cols-2 gap-4 md:h-[420px]">
 
       <div className="relative group w-full h-full min-h-[250px]">
@@ -68,13 +68,13 @@ export default function Home() {
     </div>
 
   
-    <div className="grid grid-cols-1 gap-4 md:h-[420px]">
+    <div className="grid grid-cols-2 gap-4 md:h-[420px] sm:flex ">
 
       <div className="relative group w-full h-full min-h-[200px]">
         <img
           src={digitalImg1}
           alt="Digital Watches"
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full object-cover rounded-lg  "
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition">
           <p className="text-white text-lg font-semibold">Digital</p>

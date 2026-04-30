@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Footer(){
 
     return(
@@ -12,9 +13,9 @@ Crafting watches that define every<br/> second of your journey.</p></div>
 <div>
     <h4 className="text-xl font-thick p-4">Quick Links</h4>
     <ol className="text-gray-600">
-        <li>Home</li>
-        <li>Product</li>
-        <li>Trending</li>
+       
+        <li><Link to="/product">Product</Link></li>
+        <li><Link to="/cart">Cart</Link></li>
     </ol>
 </div>
 

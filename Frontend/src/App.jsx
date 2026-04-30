@@ -5,6 +5,7 @@ import Cart from "./Pages/Cart"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Product from "./Pages/Product"
 import ProductCard from "./components/ProductCard"
+import Checkout from "./Pages/Checkout"
 export default function App(){
 
   return(
@@ -17,6 +18,7 @@ export default function App(){
     <Route path="/cart" element={<Cart/>}/>
     <Route path="/productcard" element={<ProductCard/>}/>
     <Route path="/product" element={<Product/>}/>
+    <Route path="/checkout" element={<Checkout/>}/>
     </Routes></BrowserRouter>
     </>
   )

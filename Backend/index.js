@@ -7,12 +7,12 @@ const fs=require("fs")
 const User=require("./models/user");
 const Product=require("./models/product");
 const Cart=require("./models/cart");
+const Order=require("./models/order");
 
 
 const app=express();
 app.use(cors());
-
-app.use(bodyParser.json())
+app.use(express.json());
 
 mongoose.connect("mongodb://127.0.0.1:27017/UserData_Watch")
 .then(()=>console.log("Connected to mongodb"))
@@ -123,5 +123,31 @@ app.delete("/api/cart/:id", async (req, res) => {
   }
 });
 
+
+//place Order
+app.post("/api/orders", async (req, res) => {
+
+  try {
+    const newOrder = new Order(req.body);
+    await newOrder.save();
+    res.status(201).json(newOrder);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json("Failed to place order");
+  }
+});
+
+
+
+//GET User Orders
+app.get("/api/orders/:userId",async(req,res)=>{
+  try{
+    const orders=await Order.find({userId: req.params.userId});
+    res.json(orders);
+
+  }catch(err){
+    res.status(500).json("Error fetching orders");
+  }
+});
 
 app.listen(5000,()=>console.log("server is running in port 5000"))
