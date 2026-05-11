@@ -27,3 +27,23 @@
 .animate-fadeSlideUp2 {
   animation: fadeSlideUp2 0.5s ease-out forwards;
 }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

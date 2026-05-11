@@ -124,6 +124,18 @@ app.delete("/api/cart/:id", async (req, res) => {
 });
 
 
+//Clear Entire Cart
+app.delete("/api/cart", async(req,res)=>{
+  try{
+    await Cart.deleteMany();
+    res.json("Cart cleared");
+
+  }
+  catch(err){
+    res.status(500).json("Error during clearing cart")
+  }
+})
+
 //place Order
 app.post("/api/orders", async (req, res) => {
 

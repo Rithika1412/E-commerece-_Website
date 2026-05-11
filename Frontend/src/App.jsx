@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Product from "./Pages/Product"
 import ProductCard from "./components/ProductCard"
 import Checkout from "./Pages/Checkout"
+import OrderSucc from "./Pages/OrderSucc"
 export default function App(){
 
   return(
@@ -19,6 +20,7 @@ export default function App(){
     <Route path="/productcard" element={<ProductCard/>}/>
     <Route path="/product" element={<Product/>}/>
     <Route path="/checkout" element={<Checkout/>}/>
+    <Route path="/ordersuccessful" element={<OrderSucc/>}/>
     </Routes></BrowserRouter>
     </>
   )

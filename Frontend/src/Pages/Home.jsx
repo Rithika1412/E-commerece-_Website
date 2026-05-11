@@ -9,6 +9,7 @@ import Footer from "../Components/Footer"
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "../App.css"
 
 export default function Home() {
 
@@ -22,10 +23,10 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex items-center justify-center bg-cover bg-center bg"
+      <div className="min-h-screen flex items-center justify-center bg-cover bg-center "
         style={{ backgroundImage: `url(${bgImage})` }}>
         <div className="     w-full h-full flex items-center justify-center px-4">
-          <div className="text-center max-w-2xl text-white space-y-8 mt-20 ">
+          <div className="animate-slideUp text-center max-w-2xl text-white space-y-8 mt-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">Timeless Style,<br />Perfect Watches</h2>
             <p className="text-sm sm:text-base md:text-xl font-bold">Discover premium watches crafted for every occasion. Style meets precision</p>
             <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition " >
@@ -33,7 +34,7 @@ export default function Home() {
           </div>
         </div></div>
 
-      <section className="py-12 px-4">
+      <section className=" py-12 px-4">
   <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center flex justify-center items-center mt-6">
     Categories
   </h2>

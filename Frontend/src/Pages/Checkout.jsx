@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../Components/Navbar"
+import { Link, useNavigate } from "react-router-dom";
 import "../App.css"
+
 
 export default function Checkout() {
   const [address, setAddress] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("COD");
   const [cart, setCart]=useState([]);
+  const [showQR, setShowQR] = useState(false);
+  const navigate=useNavigate()
 
   useEffect(() => {
   axios.get("http://localhost:5000/api/cart")
@@ -14,7 +18,8 @@ export default function Checkout() {
     .catch(err => console.log(err));
 }, []);
 
-  const placeOrder = async () => {
+  const placeOrder = async (e) => {
+    e.preventDefault();
   if (!address) {
     alert("Please enter address");
     return;
@@ -34,7 +39,9 @@ export default function Checkout() {
       paymentMethod
     });
 
-    alert("Order placed successfully!");
+    // alert("Order placed successfully!");
+    
+navigate("/ordersuccessful");
 
     // clear backend cart
     await axios.delete("http://localhost:5000/api/cart");
@@ -43,7 +50,7 @@ export default function Checkout() {
     setCart([]);
 
   } catch (err) {
-  console.log("ERROR:", err.response?.data || err.message);
+  console.log(err);
   alert("Failed to place order");
 
   }
@@ -58,6 +65,7 @@ export default function Checkout() {
       <div className="bg-white p-6 rounded-lg shadow w-full max-w-md transition transform duration-300 
                 hover:-translate-y-2 hover:shadow-xl 
                 opacity-0 translate-y-6 animate-fadeSlideUp">
+        <form onSubmit={placeOrder}>
         <h2 className="text-2xl font-bold mb-4">Checkout</h2>
 
         {/* Address */}
@@ -69,23 +77,51 @@ export default function Checkout() {
         />
 
         {/* Payment */}
-        <select
-          value={paymentMethod}
-          onChange={(e) => setPaymentMethod(e.target.value)}
-          className="w-full border p-2 mb-4 rounded"
-        >
-          <option value="COD">Cash on Delivery</option>
-          <option value="ONLINE">Online Payment</option>
-        </select>
+<select
+  value={paymentMethod}
+  onChange={(e) => {
+    setPaymentMethod(e.target.value);
+    setShowQR(false);
+  }}
+  className="w-full border p-2 mb-4 rounded"
+>
+  <option value="COD">Cash on Delivery</option>
+  <option value="ONLINE">Online Payment</option>
+</select>
+
+{/* Scan & Pay Button */}
+{paymentMethod === "ONLINE" && !showQR && (
+  <button
+    type="button"
+    onClick={() => setShowQR(true)}
+    className="w-full bg-green-600 text-white py-2 rounded-lg mb-4
+               hover:bg-green-700 transition"
+  >
+    Scan & Pay
+  </button>
+)}
+
+{/* QR Code */}
+{showQR && (
+  <div className="text-center mb-4">
+    <img
+      src="/qr.png"
+      alt="UPI QR"
+      className="w-64 mx-auto rounded-lg shadow"
+    />
+  </div>
+)}
+
 
         <button
-          onClick={placeOrder}
+          type="submit"
           className="block w-full bg-black text-white py-2 rounded-lg text-center 
                transition-all duration-300 ease-in-out
                hover:bg-gray-700 hover:scale-105 active:scale-95"
-        >
-          Place Order
+        >Place Order
+          
         </button>
+        </form>
       </div>
     </div>
     </>

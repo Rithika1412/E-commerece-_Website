@@ -12,7 +12,7 @@ export default function Navbar({ setSearch }) {
   };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-white shadow-md sticky top-0 z-50 opacity-70">
     
       <div className="flex justify-between items-center px-4 py-3 md:px-8">
  
